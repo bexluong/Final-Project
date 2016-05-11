@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  origin: MyString
+  string: MyString
+  destination: MyString
+  string: MyString
+  times_per_week: MyString
+  integer: MyString
+
+two:
+  origin: MyString
+  string: MyString
+  destination: MyString
+  string: MyString
+  times_per_week: MyString
+  integer: MyString
