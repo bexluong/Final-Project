@@ -1,0 +1,94 @@
+body {
+  background:
+  linear-gradient(
+    rgba(255, 255, 255, 0.65),
+    rgba(255, 255, 255, 0.65)
+  ),
+  url("commute-bg.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+@font-face {
+    font-family: "ostrich";
+    src: url('<%= asset_path("ostrich-sans-regular.eot#iefix") %>') format('embedded-opentype'),
+    url('<%= asset_path("fonts/ostrich-sans-regular.woff")%>') format('woff'),
+    url('<%= asset_path("ostrich-sans-regular.ttf") %>') format('truetype');
+}
+@font-face {
+    font-family: "ostrichBold";
+    src: url('<%= asset_path("ostrich-sans-bold.eot#iefix") %>') format('embedded-opentype'),
+    url('<%= asset_path("fonts/ostrich-sans-bold.woff")%>') format('woff'),
+    url('<%= asset_path("ostrich-sans-bold.ttf") %>') format('truetype');
+}
+@font-face {
+    font-family: "ostrichBlack";
+    src: url('<%= asset_path("ostrich-sans-black.eot#iefix") %>') format('embedded-opentype'),
+    url('<%= asset_path("fonts/ostrich-sans-black.woff")%>') format('woff'),
+    url('<%= asset_path("ostrich-sans-black.ttf") %>') format('truetype');
+}
+
+
+h1 {
+    font-family: "ostrichBold";
+    font-size: 400%;
+    text-align: center;
+}
+
+#header {
+  padding-top: 80px;
+}
+
+.form-style {
+   margin:0 auto;
+   width: 60%;
+  //  border: 3px solid #73AD21;
+   padding: 10px;
+   display: block;
+   text-align: center;
+}
+
+
+input[type=text] {
+    width: 60%;
+    padding: 16px 20px;
+    margin: 16px 0;
+    box-sizing: border-box;
+    border: 3px solid #444444;
+    border-radius: 3px;
+    text-align: center;
+    background-color: rgba(255,255,255,0.6);
+    font-family: 'ostrich';
+    text-transform: uppercase;
+    font-size: 150%;
+
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color:    #787878;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color:    #787878;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+    color:    #787878;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color:    #787878;
+}
+
+button {
+    background-color: #444444;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+    margin:0 auto;
+    font-family: 'Oswald', sans-serif;;
+    letter-spacing: 2px;
+}
