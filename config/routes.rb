@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get '/' => 'calculate#index'
+  get '/home' => 'calculate#index'
+
+  post '/search' => 'calculate#search'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

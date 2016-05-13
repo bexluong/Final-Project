@@ -11,7 +11,7 @@ class Calculate < ActiveRecord::Base
 
   API_BASE_URL = 'https://maps.googleapis.com/maps/api/directions/json?origin=' + @origin + '&destination=' + @destination
 
-  def fetch
+  def fetch_bicycle
     url =
     uri = URI(url)
     response = Net::HTTP.start(uri.host, uri.port, use_ssl: true) do |http|
