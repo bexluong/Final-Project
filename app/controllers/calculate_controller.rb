@@ -3,10 +3,17 @@ class CalculateController < ApplicationController
   end
 
   def search
-    originraw = params[:origin]
-    @origin = originraw.gsub! /\s+/, '+'
-    destinationraw = params[:destination]
-    @destination = destinationraw.gsub! /\s+/, '+'
+    origin, destination = beautify_params(params[:origin], params[:destination])
+    newcalc = Calculate.new(origin, destination)
+    response = newcalc.fetch_data
+  
+  end
+
+
+
+  private
+  def beautify_params(origin, destination)
+    return (origin.gsub! /\s+/, '+'), (destination.gsub! /\s+/, '+')
   end
 
 end
