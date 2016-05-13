@@ -6,7 +6,8 @@ class CalculateController < ApplicationController
     origin, destination = beautify_params(params[:origin], params[:destination])
     newcalc = Calculate.new(origin, destination)
     response = newcalc.fetch_data
-  
+    
+
   end
 
 
