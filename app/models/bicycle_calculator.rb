@@ -12,11 +12,11 @@ class Bicycle_Calculator < Calculator
     end
 
     def calculate_co2
-      total_co2 = (@route_deets[:distance]/1000) * 21
+      total_co2 = ((@route_deets[:distance]/1000) * 21).round
     end
 
     def calculate_time
-      total_time = ( @route_deets[:time] * 40  ) / 3600 #monthly
+      total_time = (( @route_deets[:time] * 43.33   ) / 3600).round #monthly
       #in hours
     end
 

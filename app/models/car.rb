@@ -6,16 +6,16 @@ class Car < Calculator
 
     def calculate_cost
       litres_burned = (0.065 * (@route_deets[:distance]/1000)) * 40
-      total_cost = (litres_burned * 1.28) + 55
+      total_cost = ((litres_burned * 1.28) + 55).round(2)
 
     end
 
     def calculate_co2
-      total_co2 = (@route_deets[:distance]/1000) * 123.4
+      total_co2 = ((@route_deets[:distance]/1000) * 271).round
     end
 
     def calculate_time
-      total_time = ( @route_deets[:time] * 40  ) / 3600 #monthly
+      total_time = (( @route_deets[:time] * 43.33  ) / 3600).round #monthly
       #in hours
     end
 
