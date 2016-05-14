@@ -5,8 +5,16 @@ class CalculatorController < ApplicationController
   def search
     origin, destination = beautify_params(params[:origin], params[:destination])
     bike = Bicycle_Calculator.new(origin, destination)
-    response = bike.fetch_data(@mode)
-    # CREATE INSTANCES OF THE METHODS
+    bike.route_details
+    @bike_cost = bike.calculate_cost
+    @bike_co2 = bike.calculate_co2
+    @bike_time = bike.calculate_time
+
+    car = Car.new(origin, destination)
+    car.route_details
+    @car_cost = car.calculate_cost
+    @car_co2 = car.calculate_co2
+    @car_time = car.calculate_time
 
 
   end

@@ -1,18 +1,17 @@
-class Bicycle_Calculator < Calculator
-    require "net/http"
-
+class Car < Calculator
     def initialize(origin, destination)
     super
-      @mode = 'bicycling'
-
+      @mode = 'driving'
     end
 
     def calculate_cost
-      monthly_bike_cost = 9.65
+      litres_burned = (0.065 * (@route_deets[:distance]/1000)) * 40
+      total_cost = (litres_burned * 1.28) + 55
+
     end
 
     def calculate_co2
-      total_co2 = (@route_deets[:distance]/1000) * 21
+      total_co2 = (@route_deets[:distance]/1000) * 123.4
     end
 
     def calculate_time
