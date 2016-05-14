@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Commute</title>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaljhwqza0E_tfS7tkPupnpmDzWM47unQ&libraries=places"></script>
+
+  </head>
+  <body>
+    <div id="header">
+      <h1>DISCOVER YOUR OPTIMAL COMMUTE</h1>
+    </div>
+    <div
+      class="form-style">
+      <form action="/search" method="POST">
+      <input id="locationTextField" type="text" name="origin" placeholder="Origin Address">
+      <br>
+      <input id="destinationTextField" type="text" name="destination" placeholder="Destination Address">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %> "><br>
+      <button type="submit">CALCULATE</button>
+    </form>
+  </div>
+    <script>
+      function init() {
+        var input = document.getElementById('locationTextField');
+        var autocomplete = new google.maps.places.Autocomplete(input);
+      }
+      google.maps.event.addDomListener(window, 'load', init);
+    </script>
+    <script>
+      function init() {
+        var input = document.getElementById('destinationTextField');
+        var autocomplete = new google.maps.places.Autocomplete(input);
+      }
+
+      google.maps.event.addDomListener(window, 'load', init);
+    </script>
+
+
+</body>
+</html>

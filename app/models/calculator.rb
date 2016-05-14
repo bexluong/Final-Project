@@ -1,4 +1,4 @@
-class Calculate < ActiveRecord::Base
+class Calculator < ActiveRecord::Base
   require "net/http"
 
   def initialize(origin, destination)
@@ -11,8 +11,7 @@ class Calculate < ActiveRecord::Base
 
   API_BASE_URL = 'https://maps.googleapis.com/maps/api/directions/json?origin='
 
-  def fetch_data
-    @mode = "bicycling"
+  def fetch_data(mode)
     url = API_BASE_URL + @origin + '&destination=' + @destination + "&mode=" + @mode + "&key=" + @key
     uri = URI.parse(URI.escape(url))
     @response = Net::HTTP.start(uri.host, uri.port, use_ssl: true) do |http|
@@ -20,8 +19,8 @@ class Calculate < ActiveRecord::Base
       http.request request
     end
   @response
-  bike = Calculate_Bike.new
-  bike.initialize
+
+
 
   end
 

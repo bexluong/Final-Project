@@ -1,10 +1,9 @@
-class CreateCalculates < ActiveRecord::Migration
+class CreateCalculators < ActiveRecord::Migration
   def change
-    create_table :calculates do |t|
+    create_table :calculators do |t|
       t.string :origin
-      t.string :string
+      t.string :type
       t.string :destination
-      t.string :string
       t.string :times_per_week
       t.string :integer
 
