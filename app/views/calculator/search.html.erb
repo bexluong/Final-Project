@@ -4,47 +4,91 @@
     <meta charset="UTF-8">
     <title>Commute</title>
 
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="screen" />
   </head>
   <body id="search">
+    <div class="container-fluid">
 
       <div class="row">
-    <h1>Bike</h1>
-    <p>
-      Your time per month is ***<%= @bike_time %>
-      hours***
-      <br>
-      Your cost per month is ***<%= @bike_cost %>
-      euros***<br>
-      Your CO2 emmissions is ***<%= @bike_co2 %>
-      (g)***
-    </p>
-    <h1>Car</h1>
-    <p>
-      Your time per month is ***<%= @car_time %>
-      hours***
-      <br>
-      Your cost per month is ***<%= @car_cost %>
-      euros***<br>
-      Your CO2 emmissions is ***<%= @car_co2 %>
-      (g)***
-    </p>
-    <h1>Transit</h1>
-    Your time per month is ***<%= @transit_time %>
-    hours***
-    <br>
-    Your cost per month is ***<%= @transit_cost %>
-    euros***<br>
-    Your CO2 emmissions is ***<%= @transit_co2 %>
-    (g)***
-    <h1>Walking</h1>
-    Your time per month is ***<%= @walking_time %>
-    hours***
-    <br>
-    Your cost per month is ***<%= @walking_cost %>
-    euros***<br>
-    Your CO2 emmissions is ***<%= @walking_co2 %>
-    (g)***
-</div>
+
+        <div class="col-md-12">.col-md-1   </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-2">.col-md-1</div>
+        <div class="col-md-2"><div class="circle"><i class="fa fa-bicycle fa-5x" aria-hidden="true"></i></div></div>
+        <div class="col-md-2"><div class="circle"><i class="fa fa-car" aria-hidden="true"></i></div></div>
+        <div class="col-md-2"><div class="circle"><i class="fa fa-bus" aria-hidden="true"></i>
+</div></div>
+        <div class="col-md-2"><div class="circle"></div><span class="glyphicons glyphicons-person-walking"></span></div>
+        <div class="col-md-1">.col-md-1</div>
+      </div>
+      <div class="row">
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-2">.col-md-1</div>
+        <div class="col-md-2"><div class="data-sq"></div></div>
+        <div class="col-md-2"><div class="data-sq"></div></div>
+        <div class="col-md-2"><div class="data-sq"></div></div>
+        <div class="col-md-2"><div class="data-sq"></div></div>
+        <div class="col-md-1">.col-md-1</div>
+      </div>
+      <div class="row">
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-2">.col-md-1</div>
+        <div class="col-md-2">.col-md-2</div>
+        <div class="col-md-2">.col-md-2</div>
+        <div class="col-md-2">.col-md-2</div>
+        <div class="col-md-2">.col-md-2</div>
+        <div class="col-md-1">.col-md-1</div>
+      </div>
+      <div class="row">
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-2">.col-md-1</div>
+        <div class="col-md-2">.col-md-2</div>
+        <div class="col-md-2">.col-md-2</div>
+        <div class="col-md-2">.col-md-2</div>
+        <div class="col-md-2">.col-md-2</div>
+        <div class="col-md-1">.col-md-1</div>
+      </div>
+        <h1>Bike</h1>
+        <p>
+          Your time per month is ***<%= @bike_time %>
+          hours***
+          <br>
+          Your cost per month is ***<%= @bike_cost %>
+          euros***<br>
+          Your CO2 emmissions is ***<%= @bike_co2 %>
+          (g)***
+        </p>
+        <h1>Car</h1>
+        <p>
+          Your time per month is ***<%= @car_time %>
+          hours***
+          <br>
+          Your cost per month is ***<%= @car_cost %>
+          euros***<br>
+          Your CO2 emmissions is ***<%= @car_co2 %>
+          (g)***
+        </p>
+        <h1>Transit</h1>
+        Your time per month is ***<%= @transit_time %>
+        hours***
+        <br>
+        Your cost per month is ***<%= @transit_cost %>
+        euros***<br>
+        Your CO2 emmissions is ***<%= @transit_co2 %>
+        (g)***
+        <h1>Walking</h1>
+        Your time per month is ***<%= @walking_time %>
+        hours***
+        <br>
+        Your cost per month is ***<%= @walking_cost %>
+        euros***<br>
+        Your CO2 emmissions is ***<%= @walking_co2 %>
+        (g)***
+
+    </div>
   </body>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </html>

@@ -1,6 +1,5 @@
 
 #home{
-
   background:
   linear-gradient(
     rgba(255, 255, 255, 0.65),
@@ -19,7 +18,10 @@
     rgba(255, 255, 255, 0.65)
   ),
   url("road.jpg") no-repeat center center fixed;
-
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 @font-face {
@@ -101,4 +103,22 @@ button {
     margin:0 auto;
     font-family: 'Oswald', sans-serif;;
     letter-spacing: 2px;
+}
+.circle {
+	width: 200px;
+	height: 200px;
+	background: #86abd0;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+}
+i.fa  {
+    font-size:10.6em;
+    color: #e3e5ee;
+}
+
+.data-sq {
+  width: 200px;
+  height: 600px;
+  background: #d9e9eb;
 }
