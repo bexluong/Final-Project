@@ -5,8 +5,6 @@ class Calculator < ActiveRecord::Base
     @origin = origin
     @destination = destination
     @key= ENV["GOOGLE_MAPS_API_KEY"]
-
-
   end
 
   API_BASE_URL = 'https://maps.googleapis.com/maps/api/directions/json?origin='

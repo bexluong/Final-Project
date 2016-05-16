@@ -4,6 +4,9 @@ class Bicycle_Calculator < Calculator
     def initialize(origin, destination)
     super
       @mode = 'bicycling'
+    end
+
+    def data_summary
 
     end
 
