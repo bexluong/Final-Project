@@ -4,6 +4,7 @@ class CalculatorController < ApplicationController
 
   def search
     origin, destination = beautify_params(params[:origin], params[:destination])
+    
     bike = Bicycle_Calculator.new(origin, destination)
     bike.route_details
     @bike_cost = bike.calculate_cost
