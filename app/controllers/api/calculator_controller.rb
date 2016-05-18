@@ -30,6 +30,15 @@ class Api::CalculatorController < ApplicationController
     bike = Bicycle_Calculator.new(origin, destination)
     @bike_response = bike.result
 
+    render json: @bike_response
+  end
+
+  def walking
+    origin, destination = beautify_params(params[:origin], params[:destination])
+
+    walking = Walking.new(origin, destination)
+    @walking_response = walking.route_details
+    render json: @walking_respons
   end
 
   private
