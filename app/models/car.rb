@@ -15,17 +15,14 @@ class Car < Calculator
     end
 
     def calculate_time
-      total_time = (( @route_deets[:time] * 43.33  ) / 3600).round #monthly
-      #in hours
+      total_time = (( @route_deets[:time] * 43.33  ) / 3600).round
     end
 
     def data
       @data ||= fetch_data
-      # if@data is nil then fetch_data
     end
 
     def route_details
-      # this calls on data,
       @route_deets =
       {
        distance: JSON.parse(data.body)["routes"][0]["legs"][0]["distance"]["value"],

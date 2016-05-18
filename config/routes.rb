@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
   get '/' => 'calculator#index'
-
+  get '/search' => 'calculator#search'
    namespace :api, defaults: {format: 'json'} do
      resources :calculator, only: [:index ]
+
+    get '/walking' => 'calculator#walking'
+    get '/bike' => 'calculator#bike'
+    get '/transit' => 'calculator#transit'
+    get '/car' => 'calculator#car'
    end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

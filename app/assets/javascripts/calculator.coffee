@@ -6,7 +6,7 @@
 $ ->
 
   fetchBikeData = ->
-    myURL = '/api/calculator'
+    myURL = '/api/bike'
     $.ajax
       type: 'GET'
       dataType: 'json'

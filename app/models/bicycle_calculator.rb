@@ -4,8 +4,15 @@ class Bicycle_Calculator < Calculator
     @mode = 'bicycling'
   end
 
+  def metrics
+    @data_sum = {
+      cost: @monthly_cost,
+      time: @total_time,
+      co2: @total_co2
+    }
+
   def calculate_cost
-    @monthly_bike_cost = 9.65
+    @monthly_cost = 9.65
   end
 
   def calculate_co2
@@ -13,17 +20,14 @@ class Bicycle_Calculator < Calculator
   end
 
   def calculate_time
-    @total_time = ((@route_deets[:time] * 43.33) / 3600).round # monthly
-    # in hours
+    @total_time = ((@route_deets[:time] * 43.33) / 3600).round #
   end
 
   def data
     @data ||= fetch_data
-    # if@data is nil then fetch_data
   end
 
   def route_details
-    # this calls on data,
     @route_deets =
       {
         distance: JSON.parse(data.body)['routes'][0]['legs'][0]['distance']['value'],
