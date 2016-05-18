@@ -2,19 +2,19 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-
-$ ->
-
-  fetchBikeData = ->
-    myURL = '/api/bike'
-    $.ajax
-      type: 'GET'
-      dataType: 'json'
-      url: myURL
-      success: (result) ->
-        console.log result
-        return
-    return
-
-  fetchBikeData()
-  return
+# 
+# $ ->
+#
+#   fetchBikeData = ->
+#     myURL = '/api/bike'
+#     $.ajax
+#       type: 'GET'
+#       dataType: 'json'
+#       url: myURL
+#       success: (result) ->
+#         console.log result
+#         return
+#     return
+#
+#   fetchBikeData()
+#   return

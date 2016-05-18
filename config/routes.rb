@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get '/' => 'calculator#index'
-  get '/search' => 'calculator#search'
+  post '/search' => 'calculator#search'
    namespace :api, defaults: {format: 'json'} do
      resources :calculator, only: [:index ]
 

@@ -7,7 +7,4 @@ $('#button').on('click', function(e){
       console.log(result);
   }
 });
-
-
-
 });

@@ -17,7 +17,7 @@
         </div>
 
         <div class="form-style">
-          <%= form_tag("/search", remote: true, method: "get") do |f| %>
+          <%= form_tag("/search", remote: true, method: "post") do |f| %>
           <%= text_field_tag :origin, nil, placeholder: "Origin Address" %>
           <%= text_field_tag :destination, nil, placeholder: "Destination Address" %> <br>
           <%= submit_tag "CALCULATE", :id=>"button"%>
