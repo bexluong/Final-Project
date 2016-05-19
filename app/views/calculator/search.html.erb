@@ -14,7 +14,7 @@
 
       <div class="row">
 
-        <div class="col-md-12"> <div class="row"><h1 class="head">Here are your Monthly results... </h1></div>  </div>
+        <div class="col-md-12"> <div class="row"><h1 class="head">Your Monthly results are... </h1></div>  </div>
       </div>
       <div class="row">
         <div class="col-md-1"></div>
@@ -26,9 +26,10 @@
         <div class="col-md-1"></div>
       </div>
       <div class="row">
-        <div class="col-md-1"></div>
+        <div class="col-md-1"><i class="fa fa-eur icon sidemetricsicons" aria-hidden="true"></i></div>
 
-        <div class="col-md-2"><div class="sidemetrics"><i class=" fa fa-eur icon" aria-hidden="true"></i></div></div>
+        <div class="col-md-2">
+          <div class="sidemetrics">Monthly Cost</div></div>
 
         <div class="col-md-2"><div class="data-sq bg"><div class="datatxt"><%= @walking_cost %></div></div></div>
 
@@ -40,8 +41,8 @@
         <div class="col-md-1"></div>
       </div>
       <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-2"><div class="sidemetrics"><i class="fa fa-clock-o icon" aria-hidden="true"></i></div></div>
+        <div class="col-md-1"><i class="fa fa-clock-o icon sidemetricsicons" aria-hidden="true"></i></div>
+        <div class="col-md-2"><div class="sidemetrics">Monthly Time Spent Communting</div></div>
 
         <div class="col-md-2"><div class="data-sq bg"><div class="datatxt"><%= @walking_time %> hrs</div></div></div>
 
@@ -54,8 +55,10 @@
         <div class="col-md-1"></div>
       </div>
       <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-2"><div class="sidemetrics"><i class="fa fa-envira icon" aria-hidden="true"></i></div></div>
+        <div class="col-md-1"><i class="fa fa-envira icon sidemetricsicons" aria-hidden="true"></i></div>
+        <div class="col-md-2">
+          <div class="sidemetrics">Monthly CO2 Emmissions</div>
+        </div>
         <div class="col-md-2"><div class="data-sq bg"><div class="datatxt"><%= @walking_co2 %> g</div></div></div>
 
         <div class="col-md-2"><div class="data-sq bg"><div class="datatxt"><%= @bike_co2 %> g </div></div></div>
