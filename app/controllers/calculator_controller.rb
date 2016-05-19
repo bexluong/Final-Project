@@ -4,12 +4,8 @@ class CalculatorController < ApplicationController
 
   def search
     origin, destination = beautify_params(params[:origin], params[:destination])
-    
-    bike = Bicycle_Calculator.new(origin, destination)
-    bike.route_details
-    @bike_cost = bike.calculate_cost
-    @bike_co2 = bike.calculate_co2
-    @bike_time = bike.calculate_time
+
+    bike_calculation(origin, destination)
 
     car = Car.new(origin, destination)
     car.route_details
@@ -32,6 +28,14 @@ class CalculatorController < ApplicationController
   end
 
   private
+
+  def bike_calculation(origin, destination)
+    bike = Bicycle_Calculator.new(origin, destination)
+    bike.route_details
+    @bike_cost = bike.calculate_cost
+    @bike_co2 = bike.calculate_co2
+    @bike_time = bike.calculate_time
+  end
 
   def beautify_params(origin, destination)
     return (origin.gsub! /\s+/, '+'), (destination.gsub! /\s+/, '+')
